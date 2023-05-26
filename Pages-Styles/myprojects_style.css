@@ -1,0 +1,233 @@
+/* Special body background */
+body::after{
+    height: 100%;
+    background-repeat: repeat-y;
+}
+/* Scroll bar */
+::-webkit-scrollbar{
+    width: 1.5em;
+}
+::-webkit-scrollbar-track{
+    background: linear-gradient(87deg, hsl(266, 75%, 67%), hsl(257, 71%, 65%)); 
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(44, 42, 42);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(145, 133, 133);
+}
+
+
+.heading{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.2rem;
+    color: white;
+}
+
+.head-flex{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.btns{
+    width: 6rem;
+    height: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    color: black;
+    background: white;
+    border: 1px solid black;
+    font-weight: 900;
+}
+.btns:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas:
+        'item1 item2' 
+        'item3 item4'
+        'item5 item6' 
+        'item7 item8'
+        'item9 item10 '
+        'item11 item12'
+        'item13 item13' 
+        'item14 item15'
+        'item16 item16' 
+        'item17 item17'
+        'item18 item18'
+        'item19 item19'
+        'item20 item20'
+        'item21 item21'
+        'item22 item23';
+    justify-items: center;
+    align-content: center;
+    gap: 2rem;
+    grid-auto-columns: 1fr;
+    max-width: 75%;
+    margin: auto;
+    /* overflow: hidden; */
+}
+.grid-names{
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: white;
+    /* word-break: break-word; */
+    font-weight: 100;
+}
+.grid-names > img{
+    max-width: 100%;
+    border-radius: 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    /* box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px; */
+    /* box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px; */
+}
+
+#bttns{
+    display: none;
+}
+.items:hover{
+    opacity: 75%;
+    cursor: pointer;
+}
+
+.grid-items1{
+    grid-area: item1;
+}
+.grid-items2{
+    grid-area: item2;
+}
+.grid-items3{
+    grid-area: item3;
+}
+.grid-items4{
+    grid-area: item4;
+}
+.grid-items5{
+    grid-area: item5;
+}
+.grid-items6{
+    grid-area: item6;
+}
+.grid-items7{
+    grid-area: item7;
+}
+.grid-items8{
+    grid-area: item8;
+}
+.grid-items9{
+    grid-area: item9;
+}
+.grid-items10{
+    grid-area: item10;
+}
+.grid-items11{
+    grid-area: item11;
+}
+.grid-items12{
+    grid-area: item12;
+}
+.grid-items13{
+    grid-area: item13;
+}
+.grid-items14{
+    grid-area: item14;
+}
+.grid-items15{
+    grid-area: item15;
+}
+.grid-items16{
+    grid-area: item16;
+}
+.grid-items17{
+    grid-area: item17;
+}
+.grid-items18{
+    grid-area: item18;
+}
+.grid-items19{
+    grid-area: item19;
+}
+.grid-items20{
+    grid-area: item20;
+}
+.grid-items21{
+    grid-area: item21;
+}
+.grid-items22{
+    grid-area: item22;
+}
+.grid-items23{
+    grid-area: item23;
+}
+
+.foot{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+@media screen and (max-width:945px) {
+    /* Section2 */
+    #bttns{
+        display: block;
+        margin: 3rem auto;
+        
+    }
+    .head-flex{
+        justify-content: center;
+    }
+    .btns{
+        display: none;
+    }
+    .grid-container{
+        grid-template-areas:
+        'item1'
+        'item2' 
+        'item3' 
+        'item4'
+        'item5'
+        'item6'
+        'item7' 
+        'item8'
+        'item9'
+        'item10'
+        'item11'
+        'item12'
+        'item13'
+        'item14'
+        'item15'
+        'item16'
+        'item17'
+        'item18'
+        'item19'
+        'item20'
+        'item21'
+        'item22'
+        'item23'
+        ;
+    }
+    .background-style{
+        background-size: 100% 100%;
+        min-height: 6rem;
+    }
+    
+    .grid-names{
+        
+        font-size: 1rem;
+
+    }
+    
+
+}

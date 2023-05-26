@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+/* font-family: 'Alata', sans-serif; */
+/* font-family: 'Josefin Sans', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+   
+}
+
+/* Body Style */
+
+body{
+    background: linear-gradient(80deg, hsl(273, 75%, 67%), hsl(240, 73%, 65%));
+    position: relative;
+}
+body::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url(./Assests/Imgs/main-background.png);
+    background-position: left;
+    background-repeat: repeat-y;
+    opacity: 10%;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+    
+}
+#space-invader {
+    box-shadow: 0 0 0 1em red, 0 1em 0 1em red, -2.5em 1.5em 0 0.5em red, 2.5em 1.5em 0 0.5em red, -3em -3em 0 0 red, 3em -3em 0 0 red, -2em -2em 0 0 red, 2em -2em 0 0 red, -3em -1em 0 0 red, -2em -1em 0 0 red, 2em -1em 0 0 red, 3em -1em 0 0 red, -4em 0 0 0 red, -3em 0 0 0 red, 3em 0 0 0 red, 4em 0 0 0 red, -5em 1em 0 0 red, -4em 1em 0 0 red, 4em 1em 0 0 red, 5em 1em 0 0 red, -5em 2em 0 0 red, 5em 2em 0 0 red, -5em 3em 0 0 red, -3em 3em 0 0 red, 3em 3em 0 0 red, 5em 3em 0 0 red, -2em 4em 0 0 red, -1em 4em 0 0 red, 1em 4em 0 0 red, 2em 4em 0 0 red;
+    background: red;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    margin: 50px 0 70px 65px;
+    position: absolute;
+    top: 64%;
+    left: 73%;
+    transform: scale(2.5);
+    opacity: 4%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+#infinity {
+    position: fixed;
+    width: 212px;
+    height: 100px;
+    box-sizing: content-box;
+    transform: scale(3);
+    top: 50%;
+    left: 16%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 4%;
+    overflow: hidden;
+  }
+  #infinity:before,
+  #infinity:after {
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 20px solid red;
+    border-radius: 50px 50px 0 50px;
+    transform: rotate(-45deg);
+    overflow: hidden;
+  }
+  #infinity:after {
+    left: auto;
+    right: 0;
+    border-radius: 50px 50px 50px 0;
+    transform: rotate(45deg);
+    overflow: hidden;
+  }
+/* Cursor styling effects */
+.cursor-effects{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    background-color:  hsl(273, 75%, 67%);
+    z-index: 999;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px  hsl(273, 75%, 67%), 0 0 60px  hsl(273, 75%, 67%), 0 0 100px  hsl(273, 75%, 67%);
+    animation: colors 5s infinite;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+@keyframes colors {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.cursor-effects::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color:  black;
+    opacity: 0.2;
+    transform: translate(-30% , -30%);
+    border-radius: 50%;
+}
+
+/* header */
+header{
+    margin-bottom: 2rem;
+}
+/* navbar */
+#port-title{
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+h1{
+    font-size: 3rem;
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+    font-weight: 900; 
+}
+h1 > a{
+    color: orange;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0rem;
+    background-color: hsl(0, 0%, 11%);
+    border-bottom: 10px;
+    
+}
+.links{
+    display: flex;
+    gap: 2rem;
+}
+.links > a{
+    color: white;
+    font-family: 'Alata', sans-serif;
+    font-size: 1rem;
+    padding: 0rem 0rem 1rem 0rem;
+    opacity: 75%;
+
+}
+
+
+.links > a:hover{
+    opacity: 100%;
+    color: orange;
+    transition: border 300ms ease-in-out;
+    border-bottom: 1px solid rgb(168, 115, 15);
+}
+.ham{
+    display: block;
+    z-index: 9;
+    background-image: url(./Assests/Imgs/icons/icon-hamburger.svg);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    margin-bottom: 0.7rem;
+    transition: transform 300ms ease-in-out;
+    display: none;
+    
+}
+
+/* Information Container */
+.container{
+  
+    display: grid;
+    grid-template-areas: 'one two';
+    justify-items: center;
+    max-width: 70%;
+    margin: auto;
+    
+}
+.informations{
+    grid-area: one;
+    align-self: center;
+}
+.pictures{
+    grid-area: two;
+    position: relative;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    text-shadow: 2px 7px 5px rgba(36, 35, 35, 0.3), 
+    0px -4px 10px rgba(75, 72, 72, 0.3);
+}
+.img-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.img-background::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(273, 75%, 67%);
+    top: 0;
+    left: 0;
+    clip-path: circle(140px at 57%);
+    transition: 0.5s;
+    z-index: -1;
+}
+.img-background:hover::before{
+    background-color: hsl(240, 73%, 65%);
+    clip-path: circle(368px at center);
+}
+
+#profile-me{
+    max-width: 26rem;
+     display: block;
+     margin: auto;
+     cursor: pointer;
+     pointer-events: none;
+ }
+ .pictures:hover #profile-me{
+    transform: translate(0%, -20%) scale(.4);
+    transition: 300ms ease-in-out;
+ }
+ .info-background{
+    position: absolute;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 5px;
+    top: 90%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    margin-inline: 1rem;
+    color: orange;
+ }
+ .pictures:hover .info-background{
+    opacity: 1;
+    visibility: visible;
+    top:53%;
+    pointer-events: none;
+    font-size: large; 
+    
+ }
+
+.main-heading{
+    font-size: 4.6rem;
+    font-weight: 700;
+    color: aliceblue;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+.main-heading > span {
+    color: orange;
+    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+
+/* typewriter */
+.other-info{
+    margin: 1rem 0rem;
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+    width: max-content;
+
+    
+}
+.other-info::before,.other-info::after{
+    content: '';
+    position: absolute;
+    top:-1px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.other-info::before{
+    background: linear-gradient(87deg, hsl(266.32deg 55.34% 59.61%), hsl(263.16deg 55.88% 60%));
+    animation: typing 5s steps(28) forwards ;
+}
+@keyframes typing {
+    to{
+        left: 100%;
+        
+    }
+}
+
+.other-info::after{
+    background-color: white;
+    width: 0.125em;
+    animation: typing 5s steps(28) forwards, blinks 750ms steps(28) infinite  ;
+}
+
+@keyframes blinks {
+    to{
+        background-color: transparent;
+    }    
+}
+.btns{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+}
+.learn-more{
+    border: 2px solid rgb(162, 108, 234);
+    background: linear-gradient(87deg, rgb(114, 77, 162), rgb(66, 60, 60));
+    border-radius: 10px;
+    color: rgb(250, 250, 250);
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 500ms ease 0s;
+    padding: 0.8em 0.17em;
+    margin: 0.5rem 0.5rem;
+    width: 7rem;
+    text-align: center;
+}
+
+
+.learn-more:hover,.learn-more:focus{
+    background-color: hsl(0, 0%, 98%);
+    border: 3px solid  hsl(266, 75%, 67%) ;
+    font-weight: 700;
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: inset 0 0 4em hsl(266, 76%, 64%), 0 0 2.5em hsl(257, 57%, 55%);
+    transform: translateY(-10%);
+    transition: transform 250ms;
+}
+
+
+
+@media screen and (max-width:945px) {
+    body::after{
+        height: 100%;
+    }
+    .container {
+        grid-template-areas:
+            'two'
+            'one';
+        gap: 1rem;
+        max-width: 100%;
+    }
+    #profile-me{
+        max-width: 100%;
+    }
+    .informations {
+        text-align: center;
+    }
+    .links{
+        display: none;
+        transform: scale(0);
+        transform-origin:  top right;
+        transition: transform 300ms ease-in-out;
+    }
+    .links > a{
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif; 
+    }
+    
+    .links-active{
+        flex-direction: column;
+    position: absolute;
+    top: 0%;
+    min-width: 100vw;
+    min-height: 100%;
+    background: black;
+    padding: 12rem 0rem 0rem 2.45rem;
+    display: flex;
+    z-index: 1;
+    transform: scale(1);
+    }
+    .btns{
+        justify-content: center;
+    }
+    .logo-active{
+        position: relative;
+        z-index: 99;
+        left: 0.4rem;
+        
+    }
+    .ham{
+        display: block;
+    }
+    .menu-btn-cross{
+        display: block;
+        z-index: 9;
+        background-image: url(./Assests/Imgs/icons/icon-close.svg);
+        
+    }
+    .other-info{
+        position: static;
+        margin: auto;
+        width: 100%;
+    }
+    .other-info::before,.other-info::after{
+        display: none;
+    }
+    /* Mobile detail style */
+ #profile-me{
+   pointer-events: all;
+}
+.pictures:hover .img-background{
+    display: none;
+}
+.info-background-new{
+    width: 90%;
+    margin-inline: auto;
+    position: static;
+    font-size: 1rem;
+    text-shadow: 2px 7px 5px rgba(36, 35, 35, 0.3), 
+    0px -4px 10px rgba(75, 72, 72, 0.3);
+}
+
+.img-background::before{
+    display: none;
+}
+.pointer-none{
+    pointer-events: none;
+}
+#infinity{
+    transform: scale(1);
+}
+#space-invader{
+    left: 50%;
+    transform: scale(0.5);
+}
+
+}
+
+@media screen and (max-width:280px) {
+   #space-invader{
+
+       transform: scale(0.5);
+   }
+}
+
+
+
+
+#preloader{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    
+    z-index: 100;
+    background: #040204 url(./Assests/Imgs/preloader.gif) no-repeat center center;
+    background-size: 15rem;
+}

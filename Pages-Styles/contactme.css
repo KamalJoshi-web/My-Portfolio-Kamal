@@ -1,0 +1,55 @@
+.social-head{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+    margin-bottom: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.social-para{
+    font-family: 'Alata', sans-serif;
+    font-size: 1.7rem;
+    text-align: center;
+    margin: auto 3rem;
+    text-shadow: 2px 7px 5px rgba(36, 35, 35, 0.3), 
+    0px -4px 10px rgba(75, 72, 72, 0.3);
+   color: rgb(10, 10, 44);
+    
+}
+.social-handles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    gap: 3rem;
+}
+.same-social{
+    pointer-events: none;
+}
+.same-style{
+    width: 10rem;
+    display: block;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    pointer-events: all;
+    border-radius: 10px;
+    transition: transform 300ms ease-in-out;
+}
+#gmail-icon{
+    margin-left: auto;
+
+}
+#linkedin-icon{
+    margin-right: auto;
+    padding: 1rem;
+}
+#github-icon{
+    padding: 1rem;
+}
+.same-style:hover{
+    transform: scale(150%);
+    cursor: pointer;
+    box-shadow: none;
+    
+}

@@ -1,0 +1,318 @@
+body::after{
+    background: 100%;
+}
+/* Common Styling */
+.head-name{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+/* About me Section */
+.about-head{
+    margin: 2rem auto;
+}
+
+.para-about-me{
+    font-family: 'Alata', sans-serif;
+    font-size: 1.7rem;
+    text-align: center;
+    margin: auto 3rem;
+    text-shadow: 2px 7px 5px rgba(36, 35, 35, 0.3), 
+    0px -4px 10px rgba(75, 72, 72, 0.3);
+   color: rgb(10, 10, 44);
+    
+}
+
+/* Skill Section */
+.skill-head{
+    margin: 2rem auto;
+}
+
+.skill-icons{
+    display: flex;
+    max-width: 75%;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 4rem auto;
+    gap: 4rem;
+}
+/* icons-style */
+.icons{
+    max-width: 33%;
+    height: 171px;
+    width: 160px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    font-size: 1em;
+    text-align: center;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    
+}
+
+/* card-styles */
+.card-imgs{
+    width: 33%;
+}
+.special-react{
+    width: 44%;
+}
+.special-js{
+    width: 26%;
+}
+
+.progressbar{
+    color: white;
+    background-color: black;
+    height: 7%;
+    text-align: center;
+    font-size: 1rem;
+    z-index: -1;
+    display: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    border-radius: 10px;
+}
+.ex-width-html{
+    width: 85%;
+}
+.ex-width-css{
+    width: 60%;
+}
+.ex-width-js{
+    width: 52%;
+}
+.ex-width-py{
+    width: 45%;
+    margin: 0.35em;
+}
+.ex-width-react{
+    width: 33%;
+    margin: 0.85em;
+}
+.ex-width-photoshop{
+    width: 45%;
+    margin: 0.35em;
+}
+
+
+
+/* html-icons-style */
+#html-icon{
+    position: relative;
+    background-image: url(../Assests/Imgs/icons/HTML5_Badge_512.png);
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position: center;
+    transition: transform 300ms ease-in-out;
+}
+.hi{
+    display: none;   
+}
+#html-icon:hover{
+    transform: scale(150%);
+}
+#html-icon:hover > .hi , #html-icon:hover > .progressbar{
+    display: block;
+    z-index: 1;
+    transform: scaleX(100%);
+}
+#html-icon:hover::after,#html-icon:focus::after{
+    content: '';
+    position: absolute;
+    background-image: url(../Assests/Imgs/skill-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 85%;
+    top: -8px;
+    left: -20px;
+    bottom: 0;
+    right: -20px;
+    padding: 27% 49%;
+    z-index: -1;
+    
+}
+
+
+/* css-icons-style */
+#css-icon{
+    position: relative;
+    background-image: url(../Assests/Imgs/icons/CSS3_logo.svg.png);
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position: center;
+    transition: transform 300ms ease-in-out;
+}
+#css-icon:hover{
+    transform: scale(150%);
+}
+#css-icon:hover > .hi , #css-icon:hover > .progressbar{
+    display: block;
+    z-index: 1;
+}
+#css-icon:hover::after,#css-icon:focus::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(../Assests/Imgs/skill-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 85%;
+    top: -8px;
+    left: -20px;
+    bottom: 0;
+    right: -20px;
+    z-index: -1;
+
+
+   
+}
+/* js-icons-style */
+#js-icon{
+    position: relative;
+    background-image: url(../Assests/Imgs/icons/613b64fe30e8530004ba3a03.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: transform 300ms ease-in-out;
+}
+#js-icon:hover{
+    transform: scale(150%);
+}
+#js-icon:hover > .hi , #js-icon:hover > .progressbar{
+    display: block;
+    z-index: 1;
+}
+#js-icon:hover::after,#js-icon:focus::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(../Assests/Imgs/skill-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 85%;
+    top: -8px;
+    left: -20px;
+    bottom: 0;
+    right: -20px;
+    z-index: -1;
+     
+   
+}
+/* python-icons-style */
+#py-icon{
+    position: relative;
+    background-image: url(../Assests/Imgs/icons/Python-logo-notext.svg.png);
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position: center;
+    transition: transform 300ms ease-in-out;
+}
+#py-icon:hover{
+    transform: scale(150%); 
+}
+#py-icon:hover > .hi , #py-icon:hover > .progressbar{
+    display: block;
+    z-index: 1;
+}
+#py-icon:hover::after,#py-icon:focus::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(../Assests/Imgs/skill-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 85%;
+    top: -13px;
+    left: -25px;
+    bottom: 0;
+    right: -20px;
+    z-index: -1;
+   
+}
+
+/* react-icons-style */
+#react-icon{
+    position: relative;
+    background-image: url('../Assests/Imgs/icons/React_\(web_framework\)-Logo.wine.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: transform 300ms ease-in-out;   
+}
+
+#react-icon:hover{
+    transform: scale(150%); 
+}
+#react-icon:hover > .hi , #react-icon:hover > .progressbar{
+    display: block;
+    z-index: 1;
+}
+#react-icon:hover::after,#react-icon:focus::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(../Assests/Imgs/skill-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 85%;
+    top: -8px;
+    left: -20px;
+    bottom: 0;
+    right: -20px;
+    z-index: -1;
+}
+/* photoshop-icons-style */
+#photoshop-icon{
+    position: relative;
+    background-image: url(../Assests/Imgs/icons/adobe-photoshop-logo-0.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: transform 300ms ease-in-out;   
+}
+
+#photoshop-icon:hover{
+    transform: scale(150%); 
+}
+#photoshop-icon:hover > .hi , #photoshop-icon:hover > .progressbar{
+    display: block;
+    z-index: 1;
+}
+#photoshop-icon:hover::after,#photoshop-icon:focus::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(../Assests/Imgs/skill-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 85%;
+    top: -8px;
+    left: -20px;
+    bottom: 0;
+    right: -20px;
+    z-index: -1;
+}
+
+@media screen and (max-width:450px) {
+    .skill-icons{
+        font-size: .7em;
+    }
+}
+@media screen and (max-width:280px) {
+    .icons{
+        font-size: .8em;
+
+    }
+}
+
